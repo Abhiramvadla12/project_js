@@ -1,0 +1,52 @@
+/* Basic Styling */
+.footer {
+    background-color: rgb(10, 152, 223);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-section {
+    margin: 10px;
+}
+
+.footer-logo {
+    max-width: 100px;
+}
+
+.footer-text {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.social-icon:hover {
+    color: #aaa;
+}
+
+.footer-bottom {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,635 @@
+{
+  "location": [
+    {
+      "id": "1",
+      "from": "telangana",
+      "to": "tamil nadu",
+      "travels": "GMRK tours and Travels",
+      "time": "22:30",
+      "duration": "07h35m",
+      "time1": "5:25",
+      "rating": "4.5",
+      "price": "499"
+    },
+    {
+      "id": "2",
+      "from": "telangana",
+      "to": "tamil nadu",
+      "travels": "IntrCity smartBus",
+      "time": "22:00",
+      "duration": "07h35m",
+      "time1": "5:20",
+      "rating": "4.4",
+      "price": "510"
+    },
+    {
+      "id": "3",
+      "from": "telangana",
+      "to": "tamil nadu",
+      "travels": "Sai RK Travels",
+      "time": "21:30",
+      "duration": "07h35m",
+      "time1": "5:00",
+      "rating": "4.6",
+      "price": "489"
+    },
+    {
+      "id": "4",
+      "from": "telangana",
+      "to": "tamil nadu",
+      "travels": "Freshbus",
+      "time": "23:30",
+      "duration": "07h35m",
+      "time1": "6:25",
+      "rating": "4.1",
+      "price": "399"
+    },
+    {
+      "id": "5",
+      "from": "telangana",
+      "to": "Andhra pradesh",
+      "travels": "Freshbus",
+      "time": "21:50",
+      "duration": "07h40m",
+      "time1": "5:20",
+      "rating": "4.6",
+      "price": "599"
+    },
+    {
+      "id": "6",
+      "from": "telangana",
+      "to": "Andhra pradesh",
+      "travels": "Sai RK Travels",
+      "time": "21:00",
+      "duration": "07h40m",
+      "time1": "4:20",
+      "rating": "4.3",
+      "price": "400"
+    },
+    {
+      "id": "7",
+      "from": "telangana",
+      "to": "Andhra pradesh",
+      "travels": "IntrCity smartBus",
+      "time": "22:50",
+      "duration": "07h40m",
+      "time1": "7:20",
+      "rating": "4.3",
+      "price": "599"
+    },
+    {
+      "id": "8",
+      "from": "telangana",
+      "to": "Andhra pradesh",
+      "travels": "GMRK tours and Travels",
+      "time": "20:50",
+      "duration": "07h40m",
+      "time1": "5:40",
+      "rating": "4.5",
+      "price": "699"
+    },
+    {
+      "id": "9",
+      "from": "tamil nadu",
+      "to": "Karnataka",
+      "travels": "IntrCity smartBus",
+      "time": "22:45",
+      "duration": "06h10m",
+      "time1": "5:35",
+      "rating": "4.5",
+      "price": "469"
+    },
+    {
+      "id": "10",
+      "from": "tamil nadu",
+      "to": "Karnataka",
+      "travels": "GMRK tours and Travels",
+      "time": "22:15",
+      "duration": "06h10m",
+      "time1": "5:15",
+      "rating": "4.5",
+      "price": "479"
+    },
+    {
+      "id": "11",
+      "from": "tamil nadu",
+      "to": "Karnataka",
+      "travels": "Freshbus",
+      "time": "21:45",
+      "duration": "06h10m",
+      "time1": "5:25",
+      "rating": "4.3",
+      "price": "569"
+    },
+    {
+      "id": "12",
+      "from": "tamil nadu",
+      "to": "Karnataka",
+      "travels": "Sai RK Travels",
+      "time": "22:00",
+      "duration": "06h10m",
+      "time1": "5:20",
+      "rating": "4.5",
+      "price": "399"
+    },
+    {
+      "id": "13",
+      "from": "Andhra pradesh",
+      "to": "Telangana",
+      "travels": "Sai RK Travels",
+      "time": "21:50",
+      "duration": "08h00m",
+      "time1": "4:35",
+      "rating": "4.4",
+      "price": "499"
+    },
+    {
+      "id": "14",
+      "from": "Andhra pradesh",
+      "to": "Telangana",
+      "travels": "GMRK tours and Travels",
+      "time": "22:50",
+      "duration": "08h00m",
+      "time1": "4:25",
+      "rating": "4.6",
+      "price": "399"
+    },
+    {
+      "id": "15",
+      "from": "Andhra pradesh",
+      "to": "Telangana",
+      "travels": "Freshbus",
+      "time": "21:45",
+      "duration": "08h00m",
+      "time1": "4:15",
+      "rating": "4.6",
+      "price": "599"
+    },
+    {
+      "id": "16",
+      "from": "Andhra pradesh",
+      "to": "Telangana",
+      "travels": "Sai RK Travels",
+      "time": "23:30",
+      "duration": "08h00m",
+      "time1": "4:33",
+      "rating": "4.5",
+      "price": "499"
+    },
+    {
+      "id": "17",
+      "from": "telangana",
+      "to": "Karnataka",
+      "travels": "sri KVR Travels",
+      "time": "23:10",
+      "duration": "07h15m",
+      "time1": "6:30",
+      "rating": "4.0",
+      "price": "549"
+    },
+    {
+      "id": "18",
+      "from": "telangana",
+      "to": "Karnataka",
+      "travels": "GMRK tours and Travels",
+      "time": "21:10",
+      "duration": "07h15m",
+      "time1": "6:30",
+      "rating": "4.1",
+      "price": "569"
+    },
+    {
+      "id": "19",
+      "from": "telangana",
+      "to": "Karnataka",
+      "travels": "Freshbus",
+      "time": "21:10",
+      "duration": "07h15m",
+      "time1": "6:10",
+      "rating": "4.6",
+      "price": "589"
+    },
+    {
+      "id": "20",
+      "from": "telangana",
+      "to": "Karnataka",
+      "travels": "IntrCity smartBus",
+      "time": "22:10",
+      "duration": "07h15m",
+      "time1": "6:10",
+      "rating": "4.3",
+      "price": "579"
+    },
+    {
+      "id": "21",
+      "from": "Hyderabad",
+      "to": "Secunderbad",
+      "travels": "Triumala Travels",
+      "time": "21:40",
+      "duration": "07h40m",
+      "time1": "5:15",
+      "rating": "4.5",
+      "price": "649"
+    },
+    {
+      "id": "22",
+      "from": "Hyderabad",
+      "to": "Secunderbad",
+      "travels": "GMRK tours and Travels",
+      "time": "22:40",
+      "duration": "07h40m",
+      "time1": "5:05",
+      "rating": "4.5",
+      "price": "639"
+    },
+    {
+      "id": "23",
+      "from": "Hyderabad",
+      "to": "Secunderbad",
+      "travels": "Freshbus",
+      "time": "21:00",
+      "duration": "07h40m",
+      "time1": "5:25",
+      "rating": "4.5",
+      "price": "659"
+    },
+    {
+      "id": "24",
+      "from": "Hyderabad",
+      "to": "Secunderbad",
+      "travels": "Sai RK Travels",
+      "time": "20:40",
+      "duration": "07h40m",
+      "time1": "5:45",
+      "rating": "4.5",
+      "price": "549"
+    },
+    {
+      "id": "25",
+      "from": "Medchal",
+      "to": "KPHB",
+      "travels": "Abhiram tours and travels",
+      "time": "23:00",
+      "duration": "07h45m",
+      "time1": "6:40",
+      "rating": "4.5",
+      "price": "599"
+    },
+    {
+      "id": "26",
+      "from": "Medchal",
+      "to": "KPHB",
+      "travels": "GMRK tours and Travels",
+      "time": "23:10",
+      "duration": "07h45m",
+      "time1": "6:30",
+      "rating": "4.5",
+      "price": "499"
+    },
+    {
+      "id": "27",
+      "from": "Medchal",
+      "to": "KPHB",
+      "travels": "Freshbus",
+      "time": "22:15",
+      "duration": "07h45m",
+      "time1": "6:20",
+      "rating": "4.5",
+      "price": "399"
+    },
+    {
+      "id": "28",
+      "from": "Medchal",
+      "to": "KPHB",
+      "travels": "Sai RK Travels",
+      "time": "21:00",
+      "duration": "07h45m",
+      "time1": "6:10",
+      "rating": "4.5",
+      "price": "299"
+    },
+    {
+      "id": "29",
+      "from": "Medchal",
+      "to": "Bownepally",
+      "travels": "ZingBus Plus",
+      "time": "22:00",
+      "duration": "07h35m",
+      "time1": "4:10",
+      "rating": "4.5",
+      "price": "500"
+    },
+    {
+      "id": "30",
+      "from": "Medchal",
+      "to": "Bownepally",
+      "travels": "GMRK tours and Travels",
+      "time": "22:00",
+      "duration": "07h35m",
+      "time1": "4:10",
+      "rating": "4.5",
+      "price": "500"
+    },
+    {
+      "id": "31",
+      "from": "Medchal",
+      "to": "Bownepally",
+      "travels": "Freshbus",
+      "time": "21:00",
+      "duration": "07h35m",
+      "time1": "4:20",
+      "rating": "4.5",
+      "price": "600"
+    },
+    {
+      "id": "32",
+      "from": "Medchal",
+      "to": "Bownepally",
+      "travels": "Triumala Travels",
+      "time": "21:10",
+      "duration": "07h35m",
+      "time1": "4:20",
+      "rating": "4.5",
+      "price": "600"
+    },
+    {
+      "id": "33",
+      "from": "Medchal",
+      "to": "KPHB",
+      "travels": "Abhiram tours and travels",
+      "time": "23:00",
+      "duration": "07h35m",
+      "time1": "5:10",
+      "rating": "4.5",
+      "price": "400"
+    },
+    {
+      "id": "34",
+      "from": "Medchal",
+      "to": "KPHB",
+      "travels": "sri KVR Travels",
+      "time": "23:00",
+      "duration": "07h35m",
+      "time1": "4:20",
+      "rating": "4.5",
+      "price": "499"
+    },
+    {
+      "id": "35",
+      "from": "Medchal",
+      "to": "KPHB",
+      "travels": "IntrCity smartBus",
+      "time": "23:00",
+      "duration": "07h35m",
+      "time1": "4:05",
+      "rating": "4.5",
+      "price": "359"
+    },
+    {
+      "id": "36",
+      "from": "Medchal",
+      "to": "KPHB",
+      "travels": "Abhiram tours and travels",
+      "time": "23:20",
+      "duration": "07h35m",
+      "time1": "4:50",
+      "rating": "4.5",
+      "price": "599"
+    }
+  ],
+  "detail": [
+    {
+      "id": "1",
+      "username": "abhiram",
+      "email": "abhiramvadla61@gmail.com",
+      "password": "Var@19092001",
+      "phone": "1234567890"
+    },
+    {
+      "id": "2",
+      "username": "saidulu",
+      "email": "saidulu61@gmail.com",
+      "password": "Sdl@123456",
+      "phone": "1234567890"
+    },
+    {
+      "id": "3",
+      "username": "saikiran",
+      "email": "saikiran23@gmail.com",
+      "password": "Sai@123456",
+      "phone": "1234567890"
+    },
+    {
+      "id": "4",
+      "username": "srikanth",
+      "email": "srikant22@gmail.com",
+      "password": "Sri@123456",
+      "phone": "1234567890"
+    },
+    {
+      "id": "5",
+      "username": "sumanth",
+      "email": "sumanth@gmail.com",
+      "password": "Smt@123456",
+      "phone": "1234567890"
+    },
+    {
+      "id": "6",
+      "username": "hemanth",
+      "email": "hemanth22@gmail.com",
+      "password": "Hmt@123456",
+      "phone": "1234567890"
+    },
+    {
+      "id": "7",
+      "username": "bharath",
+      "email": "bharath22@gmail.com",
+      "password": "Var@19092001",
+      "phone": "1234567890"
+    },
+    {
+      "id": "8",
+      "username": "digamber",
+      "email": "digamber@gmail.com",
+      "password": "Dgb@123456",
+      "phone": "1234567890"
+    },
+    {
+      "id": "9",
+      "username": "vishnu",
+      "email": "vishnu22@gmail.com",
+      "password": "Vis@123456",
+      "phone": "1234567890"
+    },
+    {
+      "id": "10",
+      "username": "Sri teja",
+      "email": "sriteja22@gmail.com",
+      "password": "Sri@123456",
+      "phone": "1234567890"
+    },
+    {
+      "id": "11",
+      "username": "Uday",
+      "email": "uday22@gmail.com",
+      "password": "Udy@123456",
+      "phone": "1234567890"
+    },
+    {
+      "id": "12",
+      "username": "saishashank",
+      "email": "saishashank22@gmail.com",
+      "password": "Sai@123456",
+      "phone": "1234567890"
+    },
+    {
+      "id": "13",
+      "username": "ajaydancer",
+      "email": "ajay22@gmail.com",
+      "password": "Ajay@123456",
+      "phone": "1234567890"
+    },
+    {
+      "id": "14",
+      "username": "pavanharsha",
+      "email": "pavan22@gmail.com",
+      "password": "Pavan@123456",
+      "phone": "1234567890"
+    },
+    {
+      "id": "15",
+      "username": "n.saikiran",
+      "email": "saikiran22@gmail.com",
+      "password": "Sai@123456",
+      "phone": "1234567890"
+    },
+    {
+      "id": "16",
+      "username": "praveenkumar",
+      "email": "praveenkumar22@gmail.com",
+      "password": "Prv@123456",
+      "phone": "1234567890"
+    },
+    {
+      "id": "10",
+      "username": "deepak nivas hooda",
+      "email": "deepak@gmail.com",
+      "password": "Deepak@1234",
+      "phone": "1234567890"
+    },
+    {
+      "id": "10",
+      "username": "rahul srinivas",
+      "email": "rahul@gmail.com",
+      "password": "Rahul@1234",
+      "phone": "1234567890"
+    },
+    {
+      "id": "10",
+      "username": "Vamshi",
+      "email": "vamshi@gmail.com",
+      "password": "Vamshi@1234",
+      "phone": "1234567890"
+    },
+    {
+      "id": 10,
+      "username": "Harish",
+      "email": "harish@gmail.com",
+      "password": "Har@1234",
+      "phone": "1234567890"
+    }
+  ],
+  "payment details": [
+    {
+      "id": "1",
+      "username": "abhiram",
+      "phone": "1234567890",
+      "email": "abhiramvadla61@gmail.com",
+      "Age": 22
+    },
+    {
+      "id": "10",
+      "username": "nargjuna",
+      "email": "abhiramvadla61@gmail.com",
+      "phone": "1234567890",
+      "age": "24"
+    },
+    {
+      "id": "10",
+      "username": "sherlock holmes",
+      "email": "sherlock1900@gmail.com",
+      "phone": "1234567890",
+      "age": "100"
+    },
+    {
+      "id": "10",
+      "username": "jhon richard son",
+      "email": "jhon@gmail.com",
+      "phone": "1234567890",
+      "age": "22"
+    },
+    {
+      "id": "10",
+      "username": "back to the future",
+      "email": "back@gmail.com",
+      "phone": "1234567890",
+      "age": "22"
+    },
+    {
+      "id": "10",
+      "username": "albert einstein",
+      "email": "albert@gmail.com",
+      "phone": "1234567890",
+      "age": "123"
+    },
+    {
+      "id": "10",
+      "username": "jhonny depp",
+      "email": "jhon@gmail.com",
+      "phone": "1234567890",
+      "age": "124"
+    },
+    {
+      "id": "10",
+      "username": "jumanji",
+      "email": "jumanji@gmail.com",
+      "phone": "1234567890",
+      "age": "123"
+    },
+    {
+      "id": "10",
+      "username": "narnia",
+      "email": "narnia@gmail.com",
+      "phone": "1234567890",
+      "age": "124"
+    },
+    {
+      "id": "10",
+      "username": "vikram",
+      "email": "vikram@gmail.com",
+      "phone": "1234567890",
+      "age": "98326"
+    },
+    {
+      "id": "10",
+      "username": "Abhiram",
+      "email": "abhiramvadla61@gmail.com",
+      "phone": "1234567890",
+      "age": "123"
+    },
+    {
+      "id": 10,
+      "username": "Harish",
+      "email": "harish@gmail.com",
+      "phone": "1234567890",
+      "age": "1243345"
+    },
+    {
+      "id": 10,
+      "username": "jsdgcws",
+      "email": "bewhjfg@g",
+      "phone": "9123345687",
+      "age": "56"
+    }
+  ]
+}

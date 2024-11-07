@@ -1,0 +1,290 @@
+a{
+    text-decoration: none;
+}
+*{
+    box-sizing: border-box;
+
+}
+body{
+    margin: 0;
+}
+.search_buses{
+    background-image: url('./bac2.jpg');
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+    height: 63vh;
+}
+.book,.fast{
+    color: aqua;
+}
+.find,.from,.to,.date{
+    color: aqua;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.bluebus{
+    color: blue!important;
+}
+.offers{
+    border: 2px solid rgb(10, 152, 223);
+    height: 60vh;
+    width: 60vw;
+    position: relative;
+    left:15vw;
+    margin: 3vh;
+    margin-bottom: 5vh;
+    border-radius: 10px;
+    background-color: rgb(10, 152, 223);
+}
+.offer_advertise{
+    color: white;
+    text-align: center;
+}
+.qr{
+    border: 2px solid;
+    height: 60vh;
+    width: 70vw;
+    border-radius: 10px;
+    position: relative;
+    left: 12vw;
+    background-image: url('./bag_image.jpg');
+    background-size: cover;
+    color: WHITE;
+    padding: 3vw;
+}
+.enjoy{
+    display: flex;
+    gap: 1vw;
+
+}
+.rating{
+    border: 2px solid;
+    border-radius: 10px;
+    text-align: center;
+
+}
+.rating,.download,.scan{
+    margin: 1vw;
+}
+.global{
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+}
+#global_heading{
+    margin-left: 5vw;
+    margin-top: 10vh;
+}
+.countries{
+    text-align: center;
+}
+.countries:hover{
+    background-color: lightgray;
+    border-radius: 10px;
+}
+/* .quick_links{
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    padding-left: 20%;
+    word-spacing: 10px;
+    letter-spacing: 1px;
+    padding-top: 8%;
+    color: white;
+}
+.footer{
+    background-color: rgb(10, 152, 223);
+}
+.heading{
+   padding-bottom: 40px;
+   position: relative;
+}
+.last{
+    color: white;
+    margin-top: 5vh;
+    text-align: center;
+}
+.icon{
+    font-size: xx-large;
+    
+    transition: transform 1s;
+}
+.icon:hover{
+    transform: scale(1.5);
+    text-shadow: 1px 1px 5px white;
+}
+.heading::before{
+    content:'';
+   
+    border: 1px solid;
+    height: 2px;
+    width: 5vw;
+    position: absolute;
+    top: 55%;
+
+}
+.move:hover{
+    transition: transform 1s;
+    transform: translate(10px,0px);
+    text-shadow: 1px 1px 5px white;
+} */
+/* Basic Styling */
+.footer {
+    background-color: rgb(10, 152, 223);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-section {
+    margin: 10px;
+}
+
+.footer-logo {
+    max-width: 100px;
+}
+
+.footer-text {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.social-icon:hover {
+    color: #aaa;
+}
+
+.footer-bottom {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+#logout_button{
+    border: 2px solid;
+    background-color: blue;
+    color: white;
+    padding: 1vh;
+    border-radius: 10px;
+}
+#back{
+    text-decoration: none;
+    color: white;
+}
+.options{
+    display: flex;
+    gap: 1vw;
+    justify-content: space-between;
+    border: 2px solid;
+    margin: 1vw;
+    padding: 1vw;
+    border-radius: 10px;
+
+}
+.options:hover{
+    box-shadow: 2px 2px 10px;
+    filter: drop-shadow(2px 2px 10px);
+    background-color: aqua;
+}
+#rating{
+    border: 2px solid black;
+    padding: 0.2vw;
+    border-radius: 10px;;
+    background-color: rgb(74, 235, 66);
+    height: 4vh;
+    /* color: white; */
+}
+.no_bus{
+    margin-top: 3vh;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-size: xx-large;
+}
+.no_bus:hover{
+    filter: drop-shadow(2px 2px 20px red);
+    background-color: aqua;
+}
+.desham:hover{
+    filter: drop-shadow(2px 2px 10px lightblue);
+    
+}
+.layout_seats{
+    border: 2px solid blue;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 10px;
+    border-radius: 10px;
+}
+.layout_seats:hover{
+    box-shadow: 2px 2px 10px aqua;
+    background-color: aqua;
+}
+@media screen and (max-width:770px) {
+    .date{
+        margin-top: -8vh;
+    }
+}
+@media screen and (max-width:430px) {
+    .search_buses{
+        height: 83vh;
+    }
+    .qr{
+        width: 100%;
+        left: 0;
+    }
+    .global{
+        display: grid;
+        grid-template-columns: repeat(2,20vw);
+        gap: 5px;
+    }
+    #global_heading{
+        text-align: center;
+    }
+    .quick_links{
+        display: block;
+    }
+    .quick{
+        font-size: 1rem;
+    }
+    .options{
+        display: block;
+    }
+    #rating{
+        width: 15vw;
+        padding: 5px;
+        height: 5vh;
+    }
+    .layout_seats{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:320px) {
+    .enjoy{
+        display: block;
+    }
+    .qr{
+        height: 600px;
+    }
+}
