@@ -56,7 +56,12 @@
         display: block;
     }
    
-} */
+}
+    
+*/
+#form{
+    margin: 3vw;
+}
  /* Basic Styling */
 .footer {
     background-color: rgb(10, 152, 223);
