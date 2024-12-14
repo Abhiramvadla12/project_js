@@ -3,7 +3,7 @@ let message1 = document.getElementById("message1");
 let insert_response = document.getElementById('insert_response');
 let count = 9;
 count++;
-let URL = "http://localhost:3000/payment details";
+let URL = "https://json-server-deploy-5.onrender.com/payment_details";
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
