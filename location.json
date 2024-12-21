@@ -544,6 +544,34 @@
       "email": "deekshith@gmail.com",
       "password": "Deek@1234",
       "phone": "1234567890"
+    },
+    {
+      "id": "10",
+      "username": "abhiram",
+      "email": "saidulu61@gmail.com",
+      "password": "P12345@k",
+      "phone": "1234567890"
+    },
+    {
+      "id": "10",
+      "username": "Abhiram",
+      "email": "abhiramvadla61@gmail.com",
+      "password": "Sanju@1234",
+      "phone": "9868977555"
+    },
+    {
+      "id": 10,
+      "username": "bankai",
+      "email": "bankai@gmail.com",
+      "password": "Bankai@1234",
+      "phone": "1234567890"
+    },
+    {
+      "id": 10,
+      "username": "Aizen",
+      "email": "aizen@gmail.com",
+      "password": "Aizen@1234",
+      "phone": "1234567890"
     }
   ],
   "payment details": [
@@ -674,16 +702,23 @@
       "age": "123"
     },
     {
-      "id": 10,
+      "id": "10",
       "username": "albert einstein",
       "email": "albert@gmail.com",
       "phone": "1234567890",
       "age": "12345"
     },
     {
-      "id": 10,
+      "id": "10",
       "username": "albert einstein",
       "email": "albert@gmail.com",
+      "phone": "1234567890",
+      "age": "1234"
+    },
+    {
+      "id": "10",
+      "username": "digamber",
+      "email": "saidulu61@gmail.com",
       "phone": "1234567890",
       "age": "1234"
     }

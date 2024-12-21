@@ -5,7 +5,7 @@ let message4 = document.getElementById("message4");
 let insert_response = document.getElementById('insert_response');
 let count = 9;
 count++;
-let URL = "https://json-server-deploy-5.onrender.com/detail";
+let URL = "http://localhost:3000/detail";
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -107,6 +107,10 @@ async function insertData(URL, options) {
             console.log("Data inserted successfully", response.status, response.statusText);
             insert_response.innerHTML = `Account created successfully`;
             alert("Account created successfully");
+            setTimeout(() => {
+                window.location.href = "./index.html";
+            }, 1000); // Redirect after 1 second
+            
         } else {
             throw new Error(`Failed to insert data: ${response.status} ${response.statusText}`);
         }

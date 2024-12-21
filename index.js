@@ -1,6 +1,7 @@
 (async () => {
+    window.alert("For guest login enter the default values in login page");
     try {
-        const response = await fetch("https://json-server-deploy-5.onrender.com/detail");
+        const response = await fetch("http://localhost:3000/detail");
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -153,7 +154,7 @@ search.addEventListener('click', async (event) => {
         }
     }
 
-    fetchData('https://json-server-deploy-5.onrender.com/location');
+    fetchData('http://localhost:3000/location');
 });
 
 function createSeatLayout(container, price, from, to, date, time, duration) {
