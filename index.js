@@ -1,6 +1,4 @@
 (async () => {
-    
-   
     try {
         const response = await fetch("https://json-server-deploy-5.onrender.com/detail");
         if (!response.ok) {
