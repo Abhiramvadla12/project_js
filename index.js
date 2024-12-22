@@ -1,7 +1,3 @@
-function hi(){
-    window.alert("For guest login enter the default values in login page");
-}
-hi()
 (async () => {
     
    
