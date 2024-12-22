@@ -1,7 +1,12 @@
-(async () => {
+function hi(){
     window.alert("For guest login enter the default values in login page");
+}
+hi()
+(async () => {
+    
+   
     try {
-        const response = await fetch("http://localhost:3000/detail");
+        const response = await fetch("https://json-server-deploy-5.onrender.com/detail");
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -154,7 +159,7 @@ search.addEventListener('click', async (event) => {
         }
     }
 
-    fetchData('http://localhost:3000/location');
+    fetchData('https://json-server-deploy-5.onrender.com/location');
 });
 
 function createSeatLayout(container, price, from, to, date, time, duration) {

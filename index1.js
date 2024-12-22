@@ -5,7 +5,7 @@ let message4 = document.getElementById("message4");
 let insert_response = document.getElementById('insert_response');
 let count = 9;
 count++;
-let URL = "http://localhost:3000/detail";
+let URL = "https://json-server-deploy-5.onrender.com/detail";
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
