@@ -560,14 +560,14 @@
       "phone": "9868977555"
     },
     {
-      "id": 10,
+      "id": "10",
       "username": "bankai",
       "email": "bankai@gmail.com",
       "password": "Bankai@1234",
       "phone": "1234567890"
     },
     {
-      "id": 10,
+      "id": "10",
       "username": "Aizen",
       "email": "aizen@gmail.com",
       "password": "Aizen@1234",
@@ -721,6 +721,13 @@
       "email": "saidulu61@gmail.com",
       "phone": "1234567890",
       "age": "1234"
+    },
+    {
+      "id": 10,
+      "username": "digamber",
+      "email": "albert@gmail.com",
+      "phone": "1234567890",
+      "age": "123"
     }
   ]
 }

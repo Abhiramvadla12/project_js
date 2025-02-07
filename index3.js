@@ -4,10 +4,10 @@ let username = document.getElementById('e-1');
 let email = document.getElementById('e-2');
 let phone = document.getElementById('e-3');
 let age = document.getElementById('e-4');
-username.innerHTML = `<span>User name: </span> ${details['username']}`;
-email.innerHTML = `<span>Email: </span> ${details['email']}`;
-phone.innerHTML = `<span>Phone: </span> ${details['phone']}`;
-age.innerHTML = `<span>Age: </span> ${details['age']}`;
+username.innerHTML = `<span>User name: </span> ${details?.user['username']}`;
+email.innerHTML = `<span>Email: </span> ${details?.user['email']}`;
+phone.innerHTML = `<span>Phone: </span> ${details?.user['phone']}`;
+age.innerHTML = `<span>Age: </span> ${details?.user['age']}`;
 document.addEventListener("DOMContentLoaded", () => {
     const bookingData = JSON.parse(localStorage.getItem("bookingData"));
     

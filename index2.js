@@ -3,7 +3,7 @@ let message1 = document.getElementById("message1");
 let insert_response = document.getElementById('insert_response');
 let count = 9;
 count++;
-let URL = "https://json-server-deploy-5.onrender.com/payment_details";
+let URL = "https://bluebus-0r8y.onrender.com/payment";
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -38,7 +38,7 @@ function submitForm(username, email, phone,age) {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            id: count,
+           
             username: username,
             email: email,
             phone: phone,
@@ -63,6 +63,7 @@ async function insertData(URL, options) {
             throw new Error(`Failed to insert data: ${response.status} ${response.statusText}`);
         }
         let data = await response.json();
+        
             //adding to local storage
             if (data) {
                 localStorage.setItem("payment details", JSON.stringify(data));

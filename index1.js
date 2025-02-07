@@ -5,7 +5,7 @@ let message4 = document.getElementById("message4");
 let insert_response = document.getElementById('insert_response');
 let count = 9;
 count++;
-let URL = "https://json-server-deploy-5.onrender.com/detail";
+let URL = "https://bluebus-0r8y.onrender.com/register";
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -52,7 +52,7 @@ form.addEventListener("submit", async (event) => {
     // Check if user already exists
     let userFound = false;
     try {
-        const response = await fetch(URL);
+        const response = await fetch(`https://bluebus-0r8y.onrender.com/login`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

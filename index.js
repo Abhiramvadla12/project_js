@@ -1,6 +1,6 @@
 (async () => {
     try {
-        const response = await fetch("https://json-server-deploy-5.onrender.com/detail");
+        const response = await fetch("https://bluebus-0r8y.onrender.com/login");
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -76,7 +76,7 @@ search.addEventListener('click', async (event) => {
     let from = document.getElementById('from').value.trim();
     let to = document.getElementById('to').value.trim();
     let date = document.getElementById('date').value;
-
+    console.log("input values ",from,to)
     if (from === "" || to === "" || date === "") {
         alert("please fill the details first from or to or date before searching ");
     }
@@ -85,7 +85,7 @@ search.addEventListener('click', async (event) => {
         try {
             let response = await fetch(url);
             let data = await response.json();
-
+            console.log("data form backend ",data)
             if (data) {
                 localStorage.setItem("locations_data", JSON.stringify(data));
             } else {
@@ -93,7 +93,7 @@ search.addEventListener('click', async (event) => {
             }
 
             let filteredResults = data.filter(element => 
-                element['from'] === from && element['to'] === to
+                element['from'].toLowerCase().trim() === from.toLowerCase().trim() && element['to'].toLowerCase().trim() === to.toLowerCase().trim()
             );
             if (filteredResults.length === 0) {
                 // Display a message if no results are found
@@ -108,7 +108,8 @@ search.addEventListener('click', async (event) => {
                 let div = document.createElement('div');
                 div.className = "options";
             
-                let travels = document.createElement('h2');
+                let travels = document.createElement('p');
+                travels.style.width = "100px";
                 let time = document.createElement('p');
                 let duration = document.createElement('p');
                 let time1 = document.createElement('p');
@@ -153,7 +154,7 @@ search.addEventListener('click', async (event) => {
         }
     }
 
-    fetchData('https://json-server-deploy-5.onrender.com/location');
+    fetchData('https://bluebus-0r8y.onrender.com/location');
 });
 
 function createSeatLayout(container, price, from, to, date, time, duration) {
@@ -210,7 +211,7 @@ function createSeatLayout(container, price, from, to, date, time, duration) {
                 seat.style.backgroundColor = seat.classList.contains("selected") ? "lightgreen" : "white";
                 display_pricing.innerHTML = total > 0 
                     ? `Total Price: $${total}
-                        <button id='pay_button' class='btn btn-outline-info'><a href='index2.html'>click here to pay</a></button>`
+                        <button id='pay_button' class='btn btn-outline-info'><a href='index2.html' style = "text-decoration: none">click here to pay</a></button>`
                     : `Click on a seat to see the pricing.`;
             }
 

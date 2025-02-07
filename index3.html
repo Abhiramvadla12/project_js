@@ -21,26 +21,38 @@
             right: 0;
             bottom: 0;
             left: 0;
-            height: 60vh;
-            margin-left: 10vw;
-            margin-right: 10vw;
+            height: 62vh;
+            width: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1em;
+            padding: 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <p id="e-1"></p>
-        <p id="e-2"></p>
-        <p id="e-3"></p>
-        <p id="e-4"></p>
-        <p id="from_display"></p>
-        <p id="to_display"></p>
-        <p id="time_display"></p>
-        <p id="duration_display"></p>
-        <p id="date_display"></p>
-        <p id="total_price_display"></p>
-
-        <button onclick="window.print()">Print E-ticket</button>
+    <div class="container" >
+        <div>
+           <p style="font-size: xx-large; font-weight: bolder;">blueBus</p>
+            <img src="./logo2.jpg" alt="image not found" height="200px" width="200px">
+        </div>
+        <div>
+            <h3>Your ticket details</h3>
+            <p id="e-1"></p>
+            <p id="e-2"></p>
+            <p id="e-3"></p>
+            <p id="e-4"></p>
+            <p id="from_display"></p>
+            <p id="to_display"></p>
+            <p id="time_display"></p>
+            <p id="duration_display"></p>
+            <p id="date_display"></p>
+            <p id="total_price_display"></p>
+    
+            <button onclick="window.print()">Print E-ticket</button>
+        </div>
+       
     </div>
     
     <script  src="index3.js"></script>

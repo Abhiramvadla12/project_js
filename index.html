@@ -16,7 +16,7 @@
 <body>
 <header class="header">
   <!--navbar -->
-      <nav class="bg-white border-gray-200 dark:bg-gray-900 " style="background-color: lightblue!important;" >
+      <nav class="bg-white border-gray-200 dark:bg-gray-900 " style="background-color: lightblue!important; height: 120px !important; margin-top:0px !important;" >
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"  >
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse" style="text-decoration: none!important;" >
             <img src="./logo2-removebg-preview.png" class="h-8" alt="Flowbite Logo" style="width: 10vw;height: 15vh;border-radius: 10px;"/>
@@ -30,8 +30,8 @@
             <!-- Dropdown menu -->
             <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
               <div class="px-4 py-3">
-                <span class="block text-sm text-gray-900 dark:text-white" id="peru">username</span>
-                <span class="block text-sm  text-gray-500 truncate dark:text-gray-400 " id="emailu">xyz@gmail.com</span>
+                <span class="block text-sm text-gray-900 dark:text-white" id="peru"></span>
+                <span class="block text-sm  text-gray-500 truncate dark:text-gray-400 " id="emailu"></span>
               </div>
               <ul class="py-2 px-4" aria-labelledby="user-menu-button">
                 <li id="logout">
@@ -116,30 +116,31 @@
               <h2 class="find">Find Your Bus</h2>
               <form id="bus-search-form" class="row g-3">
                 <div class="col-md-4">
-                  <label for="from" class="form-label from">From</label>
-                  <input list="searchs" type="text" class="form-control" id="from" placeholder="Enter Departure City">
-                  <datalist id="searchs">
-                    <option value="Medchal">Medchal</option>
-                    <option value="telangana">telangana</option>
-                    <option value="tamil nadu">tamil nadu</option>
-                    <option value="Andhra pradesh">Andhra pradesh</option>
-                    <option value="Hyderabad">Hyderabad</option>
-                </datalist>
+                    <label for="location" class="form-label" style="display: block !important; font-weight: bold !important; font-size: 32px !important; color: aqua;">From</label>
+                    <select id="from" name="location" class="form-control">
+                        <option value="" disabled selected>Enter Departure City</option>
+                        <option value="Medchal">Medchal</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                    </select>
                 </div>
                 <div class="col-md-4">
-                  <label for="to" class="form-label to">To</label>
-                  <input list="tos" type="text" class="form-control" id="to" placeholder="Enter Destination City">
-                  <datalist id="tos">
-                    <option value="Telangana">Telangana</option>
-                    <option value="tamil nadu">tamil nadu</option>
-                    <option value="Andhra pradesh">Andhra pradesh</option>
-                    <option value="Hyderabad">Hyderabad</option>
-                    <option value="karnataka">karnataka</option>
-                    <option value="Secunderabad">Secunderabad</option>
-                    <option value="KPHB">KPHB</option>
-                    <option value="Bownepally">Bownepally</option>
-                </datalist>
-                </div>
+                  <label for="to" class="form-label" style="display: block !important; font-weight: bold !important; font-size: 32px !important; color: aqua;">To</label>
+                  <select id="to" name="to" class="form-control">
+                      <option value="" disabled selected>Enter Destination City</option>
+                      <option value="Telangana">Telangana</option>
+                      <option value="Tamil Nadu">Tamil Nadu</option>
+                      <option value="Andhra Pradesh">Andhra Pradesh</option>
+                      <option value="Hyderabad">Hyderabad</option>
+                      <option value="Karnataka">Karnataka</option>
+                      <option value="Secunderabad">Secunderabad</option>
+                      <option value="KPHB">KPHB</option>
+                      <option value="Bowenpally">Bowenpally</option>
+                  </select>
+              </div>
+              
                 <div class="col-md-4">
                   <label for="date" class="form-label date">Date of Journey</label>
                   <input type="date" class="form-control" id="date">
