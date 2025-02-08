@@ -247,6 +247,9 @@ body{
     }
 }
 @media screen and (max-width:430px) {
+    #bus_logo{
+        width: 100px !important;
+    }
     .search_buses{
         height: 83vh;
     }
