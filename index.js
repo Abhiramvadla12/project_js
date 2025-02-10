@@ -178,9 +178,9 @@ search.addEventListener('click', async (event) => {
                     view_seats.style.height = "30px";
         
                     travels.innerHTML = `${element['travels']}`;
-                    time.innerHTML = `${element['time']} <br><br> ${element['from']}`;
+                    time.innerHTML = `${element['time']}  `;
                     duration.innerHTML = `${element['duration']}`;
-                    time1.innerHTML = `${element['time1']} <br> ${date} <br> ${element['to']}`;
+                    time1.innerHTML = `${element['time1']}  ${date} `;
                     rating.innerHTML = `⭐${element['rating']}`;
                     price.innerHTML = `${element['price']}`;
                     seats.innerHTML = `20 seats available`;

@@ -253,7 +253,7 @@ label{
 .options {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -389,7 +389,14 @@ label{
         font-size: 1rem;
     }
     .options{
-        display: block;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .options p{
+        margin: 10px;
     }
     #rating{
         width: 15vw;
