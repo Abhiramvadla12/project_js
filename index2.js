@@ -57,7 +57,13 @@ async function insertData(URL, options) {
             console.log("Data inserted successfully", response.status, response.statusText);
             insert_response.innerHTML = `payment completed succesfully!!!`;
             let download = document.getElementById('download_ticket');
-            alert("payment completed successfully!!!");
+            // alert("payment completed successfully!!!");
+            Swal.fire({
+                icon: "success",
+                title: "payment successfully !!!",
+                // text: "Please fill in the 'From', 'To', and 'Date' fields before searching.",
+                confirmButtonColor: "#007bff",
+            });
             download.innerHTML = `<a href="./index3.html">Download your e-ticket</a>`
         } else {
             throw new Error(`Failed to insert data: ${response.status} ${response.statusText}`);

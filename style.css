@@ -18,9 +18,10 @@ body{
 .book,.fast{
     color: #DFF2EB;
 }
+
 .find,.from,.to,.date{
     color:#4A628A;
-    font-size: 2rem;
+    
     font-weight: bolder;
 }
 .bluebus{
@@ -28,7 +29,7 @@ body{
 }
 .offers{
     border: 2px solid #4A628A;
-    height: 50vh;
+    height: 54vh;
     width: 100%;
     /* position: relative;
     left:15vw; */
@@ -103,22 +104,26 @@ body{
 .rating,.download,.scan{
     margin: 2VW;
 }
-.global{
+label{
+    font-size: 32px;
+}
+.no-bus {
     display: flex;
-    gap: 2vw;
     justify-content: center;
-}
-#global_heading{
-    margin-left: 5vw;
-    margin-top: 10vh;
-}
-.countries{
+    align-items: center;
     text-align: center;
+    background-color: #ffe6e6; /* Light red background */
+    color: #d9534f; /* Red text */
+    border: 2px solid #d9534f; /* Red border */
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
-.countries:hover{
-    background-color: lightgray;
-    border-radius: 10px;
-}
+
 /* .quick_links{
     display: flex;
     gap: 50px;
@@ -217,6 +222,7 @@ body{
     .footer-content {
         flex-direction: column;
         text-align: center;
+        font-size:16px ;
     }
 }
 #logout_button{
@@ -297,7 +303,16 @@ body{
     background: #DFF2EB;
     border-radius: 8px;
 }
+.caroImg{
+    margin: 2vw;
+    position: relative;
+    left: 33vw;
+    height: 200px; 
+    width: 500px;
+    text-align: center;
+    border-radius: 10px;
 
+}
 #rating{
     border: 2px solid black;
     padding: 0.2vw;
@@ -333,12 +348,29 @@ body{
     box-shadow: 2px 2px 10px aqua;
     background-color: aqua;
 } */
+ @media screen and (max-width: 1025px) {
+    .caroImg{
+        width: 300px;
+        left: 31vw;
+    }
+ }
 @media screen and (max-width:770px) {
     .date{
         margin-top: -8vh;
     }
+    label{
+        font-size: 16px;
+    }
+    .caroImg{
+        width: 300px;
+        left: 31vw;
+    }
 }
 @media screen and (max-width:430px) {
+    .caroImg{
+        width: 250px;
+        left: 20vw;
+    }
     #bus_logo{
         width: 100px !important;
     }
@@ -349,14 +381,7 @@ body{
         width: 100%;
         left: 0;
     }
-    .global{
-        display: grid;
-        grid-template-columns: repeat(2,20vw);
-        gap: 5px;
-    }
-    #global_heading{
-        text-align: center;
-    }
+    
     .quick_links{
         display: block;
     }
@@ -375,11 +400,20 @@ body{
         flex-wrap: wrap;
     }
 }
+@media screen and (max-width: 380px) {
+    .caroImg{
+        left: 15vw;
+    }
+}
 @media screen and (max-width:320px) {
     .enjoy{
         display: block;
     }
     .qr{
         height: 600px;
+    }
+    .caroImg{
+        width: 220px;
+        left: 14vw;
     }
 }

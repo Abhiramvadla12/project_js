@@ -106,7 +106,13 @@ async function insertData(URL, options) {
         if (response.ok) {
             console.log("Data inserted successfully", response.status, response.statusText);
             insert_response.innerHTML = `Account created successfully`;
-            alert("Account created successfully");
+            // alert("Account created successfully");
+            Swal.fire({
+                icon: "success",
+                title: "registeration successfully !!!",
+                // text: "Please fill in the 'From', 'To', and 'Date' fields before searching.",
+                confirmButtonColor: "#007bff",
+            });
             setTimeout(() => {
                 window.location.href = "./index.html";
             }, 1000); // Redirect after 1 second

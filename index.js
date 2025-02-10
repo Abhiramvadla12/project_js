@@ -32,10 +32,22 @@
                         if (username === element['username'] && email === element['email'] && password === element['password']) {
                             userFound = true;
 
+                           
                             let peru = document.getElementById("peru");
                             let emailu = document.getElementById('emailu');
                             let logout = document.getElementById('logout');
-                            logout.innerHTML = `<button id='logout_button'><a href="./index.html" id="back">Logout</a></button>`
+                            logout.innerHTML = `<button id='logout_button'><a href="./index.html" id="back">Logout</a></button>`;
+                            setTimeout(() => {
+                                let logoutButton = document.getElementById('logout_button');
+                                
+                                if (logoutButton) {
+                                    logoutButton.addEventListener("click", function () {
+                                        localStorage.removeItem("display");  // ✅ Remove user data from localStorage
+                                        location.reload();  // 🔄 Reload page to reflect logout
+                                    });
+                                }
+                            }, 100); // Ensure button exists before attaching event
+                            
                             if (peru && emailu) {
                                 peru.innerHTML = `${element['username']}`;
                                 emailu.innerHTML = `${element['email']}`;
@@ -51,9 +63,21 @@
                         display.innerHTML = userFound 
                             ? `<b>Login successful!</b>` 
                             : `<i style='color:red'>Data not found or credentials are incorrect</i>`;
-                        if(userFound){
-                            alert("logged in successfully!!!")
-                        }
+                            if (userFound) {
+                                localStorage.setItem("display", JSON.stringify(userFound)); // ✅ Store user info in localStorage
+                            
+                                Swal.fire({
+                                    icon: "success",
+                                    title: "Login successfully !!!",
+                                    confirmButtonColor: "#007bff",
+                                }).then(() => {
+                                    // ✅ Update buttons dynamically without reloading
+                                    document.querySelectorAll(".btn-outline-danger").forEach(button => {
+                                        button.style.display = "block";  // Show the "View Seats" button
+                                    });
+                                });
+                            }
+                            
                     }
                 } else {
                     const display = document.getElementById('display');
@@ -87,36 +111,54 @@ search.addEventListener('click', async (event) => {
     let date = document.getElementById('date').value;
     console.log("input values ",from,to)
     if (from === "" || to === "" || date === "") {
-        alert("please fill the details first from or to or date before searching ");
+        Swal.fire({
+            icon: "warning",
+            title: "Missing Details!",
+            text: "Please fill in the 'From', 'To', and 'Date' fields before searching.",
+            confirmButtonColor: "#007bff",
+        });
+        return; // Stop further execution
     }
+    
     else{
         async function fetchData(url) {
             try {
                 let response = await fetch(url);
                 let data = await response.json();
-                console.log("data form backend ",data)
+                console.log("Data from backend:", data);
+        
                 if (data) {
                     localStorage.setItem("locations_data", JSON.stringify(data));
                 } else {
                     console.log("No data received");
                 }
-    
-                let filteredResults = data.filter(element => 
-                    element['from'].toLowerCase().trim() === from.toLowerCase().trim() && element['to'].toLowerCase().trim() === to.toLowerCase().trim()
+        
+                let from = document.getElementById('from').value.trim();
+                let to = document.getElementById('to').value.trim();
+                let date = document.getElementById('date').value;
+        
+                let filteredResults = data.filter(element =>
+                    element['from'].toLowerCase().trim() === from.toLowerCase().trim() &&
+                    element['to'].toLowerCase().trim() === to.toLowerCase().trim()
                 );
+        
                 if (filteredResults.length === 0) {
-                    // Display a message if no results are found
-                    bus_ticket.innerHTML = `<div style='border:2px solid red;' class='no_bus'><p style="color: red;">No buses found for the selected route from '${from}' to '${to}'. Please try another route.</p></div>`;
-                    return; // Exit if there are no matching results
+                    bus_ticket.innerHTML = `
+                        <div class="no-bus">
+                            <p>No buses found for the selected route from '${from}' to '${to}'. Please try another route.</p>
+                        </div>
+                    `;
+                    return;
                 }
+        
                 filteredResults.forEach(element => {
                     let bus_seats = document.createElement('div');
                     bus_seats.style.display = "none";
                     bus_seats.className = "seat-layout";
-                
+        
                     let div = document.createElement('div');
                     div.className = "options";
-                
+        
                     let travels = document.createElement('p');
                     travels.style.width = "100px";
                     let time = document.createElement('p');
@@ -124,17 +166,17 @@ search.addEventListener('click', async (event) => {
                     let time1 = document.createElement('p');
                     let rating = document.createElement('p');
                     rating.id = 'rating';
-                    rating.style.backgroundColor = "lightgreen"
+                    rating.style.backgroundColor = "lightgreen";
                     let price = document.createElement('p');
                     let seats = document.createElement('p');
-                
+        
                     let view_seats = document.createElement('button');
                     view_seats.className = "btn btn-outline-danger";
-                    view_seats.innerHTML = `view seats`;
+                    view_seats.innerHTML = `View Seats`;
                     view_seats.style.padding = "0";
                     view_seats.style.width = "80px";
                     view_seats.style.height = "30px";
-                
+        
                     travels.innerHTML = `${element['travels']}`;
                     time.innerHTML = `${element['time']} <br><br> ${element['from']}`;
                     duration.innerHTML = `${element['duration']}`;
@@ -142,27 +184,42 @@ search.addEventListener('click', async (event) => {
                     rating.innerHTML = `⭐${element['rating']}`;
                     price.innerHTML = `${element['price']}`;
                     seats.innerHTML = `20 seats available`;
-                
+        
                     div.append(travels, time, duration, time1, rating, price, seats, view_seats);
                     bus_ticket.append(div, bus_seats);
-    
+        
                     let seatLayoutCreated = false;
                     view_seats.addEventListener("click", (event) => {
                         event.preventDefault();
-                        bus_seats.style.display = bus_seats.style.display === "none" ? "grid" : "none"; 
-    
+        
+                        // ✅ Check the login status dynamically when clicking "View Seats"
+                        let loggedInUser = JSON.parse(localStorage.getItem("display"));
+        
+                        if (!loggedInUser) {
+                            Swal.fire({
+                                icon: "warning",
+                                title: "Login Required!",
+                                text: "You need to log in to view and book seats.",
+                                confirmButtonColor: "#007bff",
+                            });
+                            return;
+                        }
+        
+                        bus_seats.style.display = bus_seats.style.display === "none" ? "grid" : "none";
+        
                         if (!seatLayoutCreated) {
                             createSeatLayout(bus_seats, element['price'], from, to, date, element['time'], element['duration']);
                             seatLayoutCreated = true;
                         }
                     });
                 });
-               
-    
+        
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
         }
+        
+        
     
         fetchData('https://bluebus-0r8y.onrender.com/location');
     }
