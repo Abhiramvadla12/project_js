@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java script project on bluebus</title>
+    <title>bluebus</title>
     <link rel="shortcut icon" href="./logo.webp" type="image/x-icon">
     <!-- Add Boxicons CSS in the <head> section -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.1/css/boxicons.min.css" rel="stylesheet">
@@ -16,16 +16,16 @@
 <body>
 <header class="header">
   <!--navbar -->
-      <nav class="bg-white border-gray-200 dark:bg-gray-900 " style="background-color: lightblue!important; height: 120px !important; margin-top:0px !important;" >
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"  >
+      <nav class="bg-white border-gray-200 dark:bg-gray-900 " style="background-color: #7AB2D3!important; height: 70px !important; margin-top:0px !important;" >
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto "  >
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse" style="text-decoration: none!important;" >
-            <img src="./logo2-removebg-preview.png" class="h-8" alt="Flowbite Logo" style="width: 10vw;height: 15vh;border-radius: 10px;" id="bus_logo"/>
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white " style="text-decoration: none!important;" >blueBus</span>
+            <img src="./logo2-removebg-preview.png" class="h-8" alt="Flowbite Logo" style="width: 100px;height: 65px;border-radius: 10px;" id="bus_logo"/>
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white " style="text-decoration: none!important; color: #4A628A;" >blueBus</span>
         </a>
         <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
               <span class="sr-only">Open user menu</span>
-              <img class="w-12 h-12 rounded-full" src="./icon.jpg" alt="user photo">
+              <img class="w-12 h-12 rounded-full" src="./icon.jpg" alt="user photo" height="65px" width="100px">
             </button>
             <!-- Dropdown menu -->
             <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
@@ -99,6 +99,56 @@
   </div>
 </div> 
 
+<!-- Banner
+<section class="container-fluid banner">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1 class="book">Book Bus Tickets Online</h1>
+      <p class="fast">Fast and Secure Ticket Booking Service</p>
+    </div>
+  </div>
+</section> -->
+<div class="offers">
+  
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators" >
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./offer-1.1.jpeg"  alt="image not found" style="margin: 2vw;position: relative;left: 40vw; height: 200px; width: 200px; text-align: center; border-radius: 10px;" >
+        
+          <h2 class="offer_advertise">Save upto to 500 on bus ticket</h2>
+          <h4 class="offer_advertise">Valid upto 21 Nov</h4>
+        
+      </div>
+      <div class="carousel-item">
+        <img src="./offer-2.1.avif"  alt="image not found" style="margin: 2vw;position: relative;left: 40vw;height: 200px; width: 200px;text-align: center;border-radius: 10px;">
+        
+          <h2 class="offer_advertise">Save upto to 200 on bus ticket</h2>
+          <h4 class="offer_advertise">Valid upto 25 Nov</h4>
+       
+      </div>
+      <div class="carousel-item">
+        <img src="./offer-3.1.png"  alt="image not found" style="margin: 2vw;position: relative;left: 40vw;height: 200px; width: 200px;text-align: center;border-radius: 10px;">
+        
+          <h2 class="offer_advertise">Save upto to 100 on bus ticket</h2>
+          <h4 class="offer_advertise">Valid upto 30 Nov</h4>
+       
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
       <!-- from ,to, date search inputs -->
       <div class="search_buses" >
         <!-- Banner -->
@@ -113,10 +163,10 @@
 
             <!-- Search Form -->
             <section class="container mt-4">
-              <h2 class="find">Find Your Bus</h2>
+              
               <form id="bus-search-form" class="row g-3">
                 <div class="col-md-4">
-                    <label for="location" class="form-label" style="display: block !important; font-weight: bold !important; font-size: 32px !important; color: aqua;">From</label>
+                    <label for="location" class="form-label" style="display: block !important; font-weight: bold !important; font-size: 32px !important; color: #4A628A;">From</label>
                     <select id="from" name="location" class="form-control">
                         <option value="" disabled selected>Enter Departure City</option>
                         <option value="Medchal">Medchal</option>
@@ -127,7 +177,7 @@
                     </select>
                 </div>
                 <div class="col-md-4">
-                  <label for="to" class="form-label" style="display: block !important; font-weight: bold !important; font-size: 32px !important; color: aqua;">To</label>
+                  <label for="to" class="form-label" style="display: block !important; font-weight: bold !important; font-size: 32px !important; color: #4A628A;">To</label>
                   <select id="to" name="to" class="form-control">
                       <option value="" disabled selected>Enter Destination City</option>
                       <option value="Telangana">Telangana</option>
@@ -143,7 +193,7 @@
               
                 <div class="col-md-4">
                   <label for="date" class="form-label date">Date of Journey</label>
-                  <input type="date" class="form-control" id="date">
+                  <input type="date" class="form-control" id="date" >
                 </div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary" id="search">Search Buses</button>
@@ -158,8 +208,8 @@
 
 <section id="body_part">
       <div class="response">
-        <div class="offers">
-          <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <!-- <div class="offers">
+           <div id="carouselExampleFade" class="carousel slide carousel-fade">
             <div class="carousel-inner">
               <div class="carousel-item active" id="caro_sel">
                 <img src="./offer-1.png"  alt="image not found" style="height: 30vh;width: 20vw;margin: 2vw;position: relative;left: 18vw;" >
@@ -186,6 +236,7 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div> -->
+          <!--
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators" >
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -224,7 +275,7 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-        </div>
+        </div> -->
         <section class="qr">
           <h1>Enjoy the App</h1>
           <div class="enjoy">
@@ -246,7 +297,7 @@
           </div>
         </section>
        
-        <section class="global1">
+        <!-- <section class="global1">
           <h1 id="global_heading">Global Preferences</h1><br>
           <div class="global">
             <div>
@@ -283,7 +334,7 @@
             </div>
     
           </div>
-        </section>
+        </section> -->
     </div>
 </section>
   <!-- <footer class="footer" id="Contact">
@@ -332,7 +383,7 @@
         <p>&copy;2024 -all rights reserved</p>
      </div>       
 </footer> -->
-<footer class="footer">
+<!-- <footer class="footer">
   <div class="footer-content">
       <div class="footer-section logo-section">
           <img src="logo2.jpg" alt="Bus Logo" class="footer-logo">
@@ -358,8 +409,112 @@
   <div class="footer-bottom">
       <p>&copy; 2023 BusTickets.com. All rights reserved.</p>
   </div>
+</footer> -->
+<div class="container mt-4" id="faq">
+  <h2 class="mb-4">FAQs Related to Bus Tickets Booking</h2>
+  
+  <ul class="nav nav-tabs" id="faqTabs">
+      <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#general">General</a></li>
+      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#ticket">Ticket-related</a></li>
+      <!-- <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#payment">Payment</a></li>
+      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#cancellation">Cancellation & Refund</a></li>
+      <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#insurance">Insurance</a></li> -->
+  </ul>
+
+  <div class="tab-content mt-3">
+      <div id="general" class="tab-pane fade show active">
+          <div class="faq-item" onclick="toggleAnswer(this)">
+              <div class="faq-question">Can I track the location of my booked bus online?</div>
+              <div class="faq-answer">Yes, real-time tracking is available on the blueBus app and website.</div>
+          </div>
+          <div class="faq-item" onclick="toggleAnswer(this)">
+              <div class="faq-question">What are the advantages of purchasing a bus ticket with blueBus?</div>
+              <div class="faq-answer">You get convenience, price comparisons, and easy booking.</div>
+          </div>
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="faq-question">Why book bus tickets online on blueBus?</div>
+            <div class="faq-answer">Booking bus tickets online on blueBus is increasingly becoming the preferred choice for travellers due to its numerous advantages over traditional methods. With blueBus, customers can book their bus tickets effortlessly from the comfort of their homes, avoiding the inconvenience of standing in long lines at bus stations or travel agencies. Online bus booking offers the luxury of comparing different bus schedules and operators and presents various discount offers and exclusive deals, resulting in significant savings. Payment security is another notable feature of online booking, which ensures that your financial information is well-protected against fraud. Additionally, customers can pick their seats, providing a customized travel experience. Online bus booking platforms give real-time updates about any changes in the bus timetable, including delays or cancellations, enabling better planning. The convenience doesn't stop here; travellers can even compare onboard amenities like charging points or snacks, further enhancing the travel experience.</div>
+        </div>
+        
+      </div>
+      <div id="ticket" class="tab-pane fade">
+          <div class="faq-item" onclick="toggleAnswer(this)">
+              <div class="faq-question">Do I need to create an account to book a bus ticket?</div>
+              <div class="faq-answer">No, but having an account allows for a better experience.</div>
+          </div>
+          <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="faq-question">Is it mandatory to take a printout of the ticket?</div>
+            <div class="faq-answer">Booking bus tickets online on blueBus is increasingly becoming the preferred choice for travellers due to its numerous advantages over traditional methods. With blueBus, customers can book their bus tickets effortlessly from the comfort of their homes, avoiding the inconvenience of standing in long lines at bus stations or travel agencies. Online bus booking offers the luxury of comparing different bus schedules and operators and presents various discount offers and exclusive deals, resulting in significant savings. Payment security is another notable feature of online booking, which ensures that your financial information is well-protected against fraud. Additionally, customers can pick their seats, providing a customized travel experience. Online bus booking platforms give real-time updates about any changes in the bus timetable, including delays or cancellations, enabling better planning. The convenience doesn't stop here; travellers can even compare onboard amenities like charging points or snacks, further enhancing the travel experience.</div>
+        </div>
+        
+      </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-content">
+      <div class="footer-section logo-section">
+          <img src="logo2.jpg" alt="Bus Logo" class="footer-logo">
+          <p class="footer-text">Safe & Easy Bus Ticketing</p>
+      </div>
+      
+      <div class="footer-section links-section">
+          <h3>Quick Links</h3>
+          <ul>
+              <li><a href="/about">About Us</a></li>
+              <!-- <li><a href="/routes">Routes</a></li> -->
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/terms">Terms & Conditions</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-section contact-section">
+          <h3>Contact Us</h3>
+          <p>Email: <a href="mailto:support@bustickets.com">support@bustickets.com</a></p>
+          <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+          <p>Address: 123 Bus Street, City, Country</p>
+          <p>Customer Support: 24/7 Available</p>
+      </div>
+
+      <div class="footer-section social-media">
+          <h3>Follow Us</h3>
+          <a href="https://www.instagram.com/vadla_abhiram/?__pwa=1" aria-label="Instagram" class="social-icon">
+              <i class="bx bxl-instagram icon"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/abhi-ram-vadla-bab5a8265?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn" class="social-icon">
+              <i class="bx bxl-linkedin icon"></i>
+          </a>
+          <a href="https://www.facebook.com" aria-label="Facebook" class="social-icon">
+              <i class="bx bxl-facebook icon"></i>
+          </a>
+          <a href="https://www.twitter.com" aria-label="Twitter" class="social-icon">
+              <i class="bx bxl-twitter icon"></i>
+          </a>
+      </div>
+
+      <div class="footer-section review-section">
+          <h3>Customer Reviews</h3>
+          <p>"Great service and easy booking!" - John D.</p>
+          <p>"Highly recommend for hassle-free travel." - Sarah L.</p>
+          <!-- <a href="/reviews" class="review-link">Read more reviews</a> -->
+      </div>
+
+      <div class="footer-section form-section">
+          <h3>Subscribe for Updates</h3>
+          <form action="/subscribe" method="post">
+              <input type="email" name="email" placeholder="Enter your email" required>
+              <button type="submit" style="background-color: black;padding: 5px;">Subscribe</button>
+          </form>
+      </div>
+  </div>
+
+  <div class="footer-bottom">
+      <p>&copy; 2024 BusTickets.com. All rights reserved.</p>
+      <p>Designed with ❤️ by BusTickets Team</p>
+  </div>
 </footer>
- 
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

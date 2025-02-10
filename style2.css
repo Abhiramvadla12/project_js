@@ -1,9 +1,12 @@
 /* Basic Styling */
+a{
+    color:  white;
+}
 #form{
     margin: 3vw;
 }
 .footer {
-    background-color: rgb(10, 152, 223);
+    background-color: #4A628A;
     color: #fff;
     padding: 20px;
     text-align: center;

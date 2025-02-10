@@ -9,16 +9,17 @@ body{
     margin: 0;
 }
 .search_buses{
-    background-image: url('./bac2.jpg');
-    background-size: contain;
+    /* background-image: url('./bac2.jpg');
+    background-size: contain; */
     /* background-repeat: no-repeat; */
     height: 63vh;
+    background-color: #4A628A;
 }
 .book,.fast{
-    color: aqua;
+    color: #DFF2EB;
 }
 .find,.from,.to,.date{
-    color: aqua;
+    color:#4A628A;
     font-size: 2rem;
     font-weight: bolder;
 }
@@ -26,15 +27,19 @@ body{
     color: blue!important;
 }
 .offers{
-    border: 2px solid rgb(10, 152, 223);
-    height: 60vh;
-    width: 60vw;
-    position: relative;
-    left:15vw;
-    margin: 3vh;
+    border: 2px solid #4A628A;
+    height: 50vh;
+    width: 100%;
+    /* position: relative;
+    left:15vw; */
+    margin: 5px;
     margin-bottom: 5vh;
     border-radius: 10px;
-    background-color: rgb(10, 152, 223);
+    background-color: #4A628A;
+}
+#body_part{
+    position: relative;
+    top: 11vh;
 }
 .offer_advertise{
     color: white;
@@ -43,11 +48,12 @@ body{
 .qr{
     border: 2px solid;
     height: 60vh;
-    width: 70vw;
+    width: 100%;
     border-radius: 10px;
-    position: relative;
-    left: 12vw;
-    background-image: url('./bag_image.jpg');
+    /* position: relative;
+    left: 12vw; */
+    /* background-image: url('./bag_image.jpg'); */
+    background-color: #7AB2D3;
     background-size: cover;
     color: WHITE;
     padding: 3vw;
@@ -61,10 +67,41 @@ body{
     border: 2px solid;
     border-radius: 10px;
     text-align: center;
-
+    /* padding: 10px; */
+    /* padding: 0 5px 5px 0; */
+}
+#bus-search-form{
+    background-color:#DFF2EB ;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    top: 10vh;
+   
+}
+.nav-tabs .nav-link.active {
+    border-bottom: 2px solid red;
+    color: red;
+}
+#faq{
+    position: relative;
+    top: 20vh;
+}
+.faq-item {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    cursor: pointer;
+}
+.faq-question {
+    font-weight: bold;
+}
+.faq-answer {
+    display: none;
+    margin-top: 10px;
 }
 .rating,.download,.scan{
-    margin: 1vw;
+    margin: 2VW;
 }
 .global{
     display: flex;
@@ -130,11 +167,13 @@ body{
 } */
 /* Basic Styling */
 .footer {
-    background-color: rgb(10, 152, 223);
+    background-color: #4A628A;
     color: #fff;
     padding: 20px;
     text-align: center;
     font-family: Arial, sans-serif;
+    position: relative;
+    top: 25vh;
 }
 
 .footer-content {
@@ -191,7 +230,7 @@ body{
     text-decoration: none;
     color: white;
 }
-.options{
+/* .options{
     display: flex;
     gap: 1vw;
     justify-content: space-between;
@@ -199,19 +238,72 @@ body{
     margin: 1vw;
     padding: 1vw;
     border-radius: 10px;
-
+    background-color: #DFF2EB;
 }
 .options:hover{
     box-shadow: 2px 2px 10px;
-    filter: drop-shadow(2px 2px 10px);
-    background-color: aqua;
+    
+} */
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease-in-out;
 }
+
+.options:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.options p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.options #rating {
+    background-color: lightgreen;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.options button {
+    background: transparent;
+    border: 2px solid red;
+    color: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.options button:hover {
+    background: red;
+    color: white;
+}
+
+.layout_seats {
+    display: none;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    padding: 10px;
+    background: #DFF2EB;
+    border-radius: 8px;
+}
+
 #rating{
     border: 2px solid black;
     padding: 0.2vw;
     border-radius: 10px;;
     background-color: rgb(74, 235, 66);
-    height: 4vh;
+   margin: 0;
     /* color: white; */
 }
 .no_bus{
@@ -230,7 +322,7 @@ body{
     filter: drop-shadow(2px 2px 10px lightblue);
     
 }
-.layout_seats{
+/* .layout_seats{
     border: 2px solid blue;
     margin-left: 5vw;
     margin-right: 5vw;
@@ -240,7 +332,7 @@ body{
 .layout_seats:hover{
     box-shadow: 2px 2px 10px aqua;
     background-color: aqua;
-}
+} */
 @media screen and (max-width:770px) {
     .date{
         margin-top: -8vh;
