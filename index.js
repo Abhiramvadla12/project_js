@@ -1,94 +1,80 @@
 (async () => {
     try {
-        const response = await fetch("https://bluebus-0r8y.onrender.com/login");
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        console.log("Fetched data:", data);
-
-        // if (data) {
-        //     localStorage.setItem("data", JSON.stringify(data));
-        // } else {
-        //     console.log("No data received");
-        // }
-
         const login = document.getElementById("login");
 
         if (login) {
-            login.addEventListener('click', function (event) {
+            login.addEventListener('click', async function (event) {
                 event.preventDefault();
 
-                // const username = document.getElementById('username')?.value || "";
-                const email = document.getElementById('email')?.value || "";
-                const password = document.getElementById('password')?.value || "";
+                const email = document.getElementById('email')?.value.trim() || "";
+                const password = document.getElementById('password')?.value.trim() || "";
 
-                const storedData = data;
-                let userFound = false;
+                if (!email || !password) {
+                    Swal.fire({
+                        icon: "warning",
+                        title: "Missing Credentials",
+                        text: "Please enter both email and password.",
+                        confirmButtonColor: "#007bff",
+                    });
+                    return;
+                }
 
-                if (storedData) {
-                    storedData.forEach(element => {
-                        if ( email === element['email'] && password === element['password']) {
-                            userFound = true;
-
-                           
-                            // let peru = document.getElementById("peru");
-                            let emailu = document.getElementById('emailu');
-                            let logout = document.getElementById('logout');
-                            logout.innerHTML = `<button id='logout_button'><a href="./index.html" id="back">Logout</a></button>`;
-                            setTimeout(() => {
-                                let logoutButton = document.getElementById('logout_button');
-                                
-                                if (logoutButton) {
-                                    logoutButton.addEventListener("click", function () {
-                                        localStorage.removeItem("display");  // ✅ Remove user data from localStorage
-                                        location.reload();  // 🔄 Reload page to reflect logout
-                                    });
-                                }
-                            }, 100); // Ensure button exists before attaching event
-                            
-                            if (emailu) {
-                                // peru.innerHTML = `${element['username']}`;
-                                emailu.innerHTML = `${element['email']}`;
-                                console.log("Updated peru and emailu successfully");
-                            } else {
-                                console.error(" 'emailu' not found in the DOM");
-                            }
-                        }
+                try {
+                    const response = await fetch("https://bluebus-0r8y.onrender.com/login", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ email, password }),
                     });
 
-                    const display = document.getElementById('display');
-                    if (display) {
-                        display.innerHTML = userFound 
-                            ? `<b>Login successful!</b>` 
-                            : `<i style='color:red'>Data not found or credentials are incorrect</i>`;
-                            if (userFound) {
-                                localStorage.setItem("display", JSON.stringify(userFound)); // ✅ Store user info in localStorage
-                            
-                                Swal.fire({
-                                    icon: "success",
-                                    title: "Login successfully !!!",
-                                    confirmButtonColor: "#007bff",
-                                }).then(() => {
-                                    // ✅ Update buttons dynamically without reloading
-                                    document.querySelectorAll(".btn-outline-danger").forEach(button => {
-                                        button.style.display = "block";  // Show the "View Seats" button
-                                    });
+                    const data = await response.json();
+
+                    if (!response.ok) {
+                        throw new Error(data.error || "Login failed. Please try again.");
+                    }
+
+                    // console.log("✅ Login successful:", data);
+                    localStorage.setItem("display", JSON.stringify(true)); // ✅ Store user info
+
+                    Swal.fire({
+                        icon: "success",
+                        title: "Login successful!",
+                        confirmButtonColor: "#007bff",
+                    }).then(() => {
+                        document.querySelectorAll(".btn-outline-danger").forEach(button => {
+                            button.style.display = "block"; // Show "View Seats" button
+                        });
+
+                        // Update UI
+                        document.getElementById("emailu").innerHTML = `${data.email}`;
+                        document.getElementById("logout").innerHTML = `<button id='logout_button'><a href="./index.html" id="back">Logout</a></button>`;
+
+                        setTimeout(() => {
+                            let logoutButton = document.getElementById('logout_button');
+                            if (logoutButton) {
+                                logoutButton.addEventListener("click", function () {
+                                    localStorage.removeItem("display");
+                                    location.reload();
                                 });
                             }
-                            
-                    }
-                } else {
-                    const display = document.getElementById('display');
-                    if (display) display.innerHTML = `<i>No data found in local storage</i>`;
+                        }, 100);
+                    });
+
+                } catch (error) {
+                    console.error("❌ Error during login:", error);
+                    Swal.fire({
+                        icon: "error",
+                        title: "Login Failed",
+                        text: error.message,
+                        confirmButtonColor: "#007bff",
+                    });
                 }
             });
         }
     } catch (error) {
-        console.error("Error fetching or storing data:", error);
+        console.error("❌ Error setting up login event listener:", error);
     }
 })();
+
 
 document.addEventListener("DOMContentLoaded", function () {
     localStorage.clear();
@@ -126,13 +112,13 @@ search.addEventListener('click', async (event) => {
             try {
                 let response = await fetch(url);
                 let data = await response.json();
-                console.log("Data from backend:", data);
+                // console.log("Data from backend:", data);
         
-                if (data) {
-                    localStorage.setItem("locations_data", JSON.stringify(data));
-                } else {
-                    console.log("No data received");
-                }
+                // if (data) {
+                //     localStorage.setItem("locations_data", JSON.stringify(data));
+                // } else {
+                //     console.log("No data received");
+                // }
         
                 let from = document.getElementById('from').value.trim();
                 let to = document.getElementById('to').value.trim();
@@ -153,13 +139,17 @@ search.addEventListener('click', async (event) => {
                 }
         
                 filteredResults.forEach(element => {
+                    let totalSeats = 20; // Total seats per bus
+                    let occupiedSeatsCount = Math.floor(Math.random() * 6) + 5; // Randomly occupy 5-10 seats
+                    let availableSeatsCount = totalSeats - occupiedSeatsCount; // Calculate available seats dynamically
+                
                     let bus_seats = document.createElement('div');
                     bus_seats.style.display = "none";
                     bus_seats.className = "seat-layout";
-        
+                
                     let div = document.createElement('div');
                     div.className = "options";
-        
+                
                     let travels = document.createElement('p');
                     travels.style.width = "100px";
                     let time = document.createElement('p');
@@ -169,33 +159,33 @@ search.addEventListener('click', async (event) => {
                     rating.id = 'rating';
                     rating.style.backgroundColor = "lightgreen";
                     let price = document.createElement('p');
-                    let seats = document.createElement('p');
-        
+                    let seats = document.createElement('p'); // ✅ Display available seats dynamically
+                
                     let view_seats = document.createElement('button');
                     view_seats.className = "btn btn-outline-danger";
                     view_seats.innerHTML = `View Seats`;
                     view_seats.style.padding = "0";
                     view_seats.style.width = "80px";
                     view_seats.style.height = "30px";
-        
+                
                     travels.innerHTML = `${element['travels']}`;
                     time.innerHTML = `${element['time']}  `;
                     duration.innerHTML = `${element['duration']}`;
                     time1.innerHTML = `${element['time1']}  ${date} `;
                     rating.innerHTML = `⭐${element['rating']}`;
-                    price.innerHTML = `${element['price']}`;
-                    seats.innerHTML = `20 seats available`;
-        
+                    price.innerHTML = `INR ${element['price']}`;
+                    seats.innerHTML = `${availableSeatsCount} seats available`; // ✅ Update available seats dynamically
+                
                     div.append(travels, time, duration, time1, rating, price, seats, view_seats);
                     bus_ticket.append(div, bus_seats);
-        
+                
                     let seatLayoutCreated = false;
                     view_seats.addEventListener("click", (event) => {
                         event.preventDefault();
-        
+                
                         // ✅ Check the login status dynamically when clicking "View Seats"
                         let loggedInUser = JSON.parse(localStorage.getItem("display"));
-        
+                
                         if (!loggedInUser) {
                             Swal.fire({
                                 icon: "warning",
@@ -205,15 +195,16 @@ search.addEventListener('click', async (event) => {
                             });
                             return;
                         }
-        
+                
                         bus_seats.style.display = bus_seats.style.display === "none" ? "grid" : "none";
-        
+                
                         if (!seatLayoutCreated) {
-                            createSeatLayout(bus_seats, element['price'], from, to, date, element['time'], element['duration']);
+                            createSeatLayout(bus_seats, element['price'], from, to, date, element['time'], element['duration'], totalSeats, occupiedSeatsCount, seats,element['travels']);
                             seatLayoutCreated = true;
                         }
                     });
                 });
+                
         
             } catch (error) {
                 console.error("Error fetching data:", error);
@@ -226,7 +217,7 @@ search.addEventListener('click', async (event) => {
     }
    
 });
-function createSeatLayout(container, price, from, to, date, time, duration) {
+function createSeatLayout(container, price, from, to, date, time, duration, totalSeats = 20, occupiedSeatsCount, seatsElement,travels) {
     let layoutWrapper = document.createElement('div');
     layoutWrapper.className = 'layout_seats';
     layoutWrapper.style.display = "flex";
@@ -246,16 +237,24 @@ function createSeatLayout(container, price, from, to, date, time, duration) {
     display_pricing.style.border = "1px solid #ccc";
     display_pricing.style.borderRadius = "5px";
     display_pricing.style.backgroundColor = "#f9f9f9";
-    display_pricing.innerHTML = `Click on an Available seat to proceed with your transaction.`;
+    display_pricing.innerHTML = `Click on an available seat to proceed with your transaction.`;
+
+    let availableSeatsCount = totalSeats - occupiedSeatsCount;
+    seatsElement.innerHTML = `${availableSeatsCount} seats available`; // ✅ Update initially
+
+    let occupiedSeats = new Set();
+    while (occupiedSeats.size < occupiedSeatsCount) {
+        occupiedSeats.add(Math.floor(Math.random() * totalSeats)); // Unique random occupied seats
+    }
 
     let fragment = document.createDocumentFragment();
     let total = 0;
     let selectedSeats = [];
     const seatPrice = Number(price);
 
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < totalSeats; i++) {
         let seat = document.createElement('div');
-        const isOccupied = Math.random() < 0.3;
+        const isOccupied = occupiedSeats.has(i);
 
         seat.className = isOccupied ? 'seat occupied' : 'seat available';
         seat.style.width = '40px';
@@ -267,40 +266,45 @@ function createSeatLayout(container, price, from, to, date, time, duration) {
         seat.innerHTML = `<span class="material-symbols-outlined" style='font-size:30px'>airline_seat_recline_extra</span>`;
         seat.dataset.seatId = `S${i + 1}`; // Assigning seat ID
 
-        seat.addEventListener("click", () => {
-            if (seat.classList.contains("occupied")) return;
+        if (!isOccupied) {
+            seat.addEventListener("click", () => {
+                seat.classList.toggle("selected");
 
-            seat.classList.toggle("selected");
+                if (seat.classList.contains("selected")) {
+                    total += seatPrice;
+                    selectedSeats.push(seat.dataset.seatId);
+                    availableSeatsCount--; // ✅ Reduce available seats
+                } else {
+                    total -= seatPrice;
+                    selectedSeats = selectedSeats.filter(id => id !== seat.dataset.seatId);
+                    availableSeatsCount++; // ✅ Increase available seats
+                }
 
-            if (seat.classList.contains("selected")) {
-                total += seatPrice;
-                selectedSeats.push(seat.dataset.seatId);
-            } else {
-                total -= seatPrice;
-                selectedSeats = selectedSeats.filter(id => id !== seat.dataset.seatId);
-            }
+                seat.style.backgroundColor = seat.classList.contains("selected") ? "lightgreen" : "white";
 
-            seat.style.backgroundColor = seat.classList.contains("selected") ? "lightgreen" : "white";
+                display_pricing.innerHTML = total > 0 
+                    ? `<p><strong>Total Price:</strong> ₹${total}</p>
+                       <p><strong>Selected Seats:</strong> ${selectedSeats.length > 0 ? selectedSeats.join(", ") : "None"}</p>
+                       <button id='pay_button' class='btn btn-outline-info'>
+                          <a href='index2.html' style="text-decoration: none">Click here to pay</a>
+                       </button>`
+                    : `Click on a seat to see the pricing.`;
 
-            display_pricing.innerHTML = total > 0 
-                ? `<p><strong>Total Price:</strong> ₹${total}</p>
-                   <p><strong>Selected Seats:</strong> ${selectedSeats.length > 0 ? selectedSeats.join(", ") : "None"}</p>
-                   <button id='pay_button' class='btn btn-outline-info'>
-                      <a href='index2.html' style="text-decoration: none">Click here to pay</a>
-                   </button>`
-                : `Click on a seat to see the pricing.`;
+                seatsElement.innerHTML = `${availableSeatsCount} seats available`; // ✅ Update dynamically
 
-            // Store selected booking data in localStorage
-            localStorage.setItem("bookingData", JSON.stringify({
-                from,
-                to,
-                time,
-                duration,
-                date,
-                total_price: total,
-                seats_selected: selectedSeats
-            }));
-        });
+                // Store selected booking data in localStorage
+                localStorage.setItem("bookingData", JSON.stringify({
+                    from,
+                    to,
+                    time,
+                    duration,
+                    date,
+                    total_price: total,
+                    seats_selected: selectedSeats,
+                    travels
+                }));
+            });
+        }
 
         fragment.appendChild(seat);
 

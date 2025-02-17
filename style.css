@@ -399,8 +399,9 @@ footer {
     }
     .options{
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        justify-content: space-between;
+        grid-template-columns: repeat(3,30vw);
+        justify-content: space-around;
+        gap: 20px;
         align-items: center;
         
     }
@@ -420,6 +421,10 @@ footer {
     /* .caroImg{
         left: 15vw;
     } */
+     .options{
+        grid-template-columns: repeat(3,35vw);
+        gap:0;
+     }
 }
 @media screen and (max-width:320px) {
     .enjoy{
