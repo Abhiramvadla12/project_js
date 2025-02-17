@@ -8,11 +8,11 @@
         const data = await response.json();
         console.log("Fetched data:", data);
 
-        if (data) {
-            localStorage.setItem("data", JSON.stringify(data));
-        } else {
-            console.log("No data received");
-        }
+        // if (data) {
+        //     localStorage.setItem("data", JSON.stringify(data));
+        // } else {
+        //     console.log("No data received");
+        // }
 
         const login = document.getElementById("login");
 
@@ -20,20 +20,20 @@
             login.addEventListener('click', function (event) {
                 event.preventDefault();
 
-                const username = document.getElementById('username')?.value || "";
+                // const username = document.getElementById('username')?.value || "";
                 const email = document.getElementById('email')?.value || "";
                 const password = document.getElementById('password')?.value || "";
 
-                const storedData = JSON.parse(localStorage.getItem("data"));
+                const storedData = data;
                 let userFound = false;
 
                 if (storedData) {
                     storedData.forEach(element => {
-                        if (username === element['username'] && email === element['email'] && password === element['password']) {
+                        if ( email === element['email'] && password === element['password']) {
                             userFound = true;
 
                            
-                            let peru = document.getElementById("peru");
+                            // let peru = document.getElementById("peru");
                             let emailu = document.getElementById('emailu');
                             let logout = document.getElementById('logout');
                             logout.innerHTML = `<button id='logout_button'><a href="./index.html" id="back">Logout</a></button>`;
@@ -48,12 +48,12 @@
                                 }
                             }, 100); // Ensure button exists before attaching event
                             
-                            if (peru && emailu) {
-                                peru.innerHTML = `${element['username']}`;
+                            if (emailu) {
+                                // peru.innerHTML = `${element['username']}`;
                                 emailu.innerHTML = `${element['email']}`;
                                 console.log("Updated peru and emailu successfully");
                             } else {
-                                console.error("Elements 'peru' or 'emailu' not found in the DOM");
+                                console.error(" 'emailu' not found in the DOM");
                             }
                         }
                     });
@@ -91,6 +91,7 @@
 })();
 
 document.addEventListener("DOMContentLoaded", function () {
+    localStorage.clear();
     let today = new Date().toISOString().split('T')[0];
     document.getElementById("date").value = today;
   });

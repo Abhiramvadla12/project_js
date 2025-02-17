@@ -12,8 +12,19 @@ body{
     /* background-image: url('./bac2.jpg');
     background-size: contain; */
     /* background-repeat: no-repeat; */
-    height: 63vh;
+    height: 50vh;
     background-color: #4A628A;
+}
+#bus-search-form{
+    background-color:#DFF2EB ;
+    border-radius: 10px;
+    padding: 10px;
+   
+   
+   
+}
+.book{
+    margin: 15px;
 }
 .book,.fast{
     color: #DFF2EB;
@@ -28,15 +39,21 @@ body{
     color: blue!important;
 }
 .offers{
-    border: 2px solid #4A628A;
-    height: 54vh;
+    /* border: 2px solid #4A628A; */
+    height: 60vh;
     width: 100%;
     /* position: relative;
     left:15vw; */
     margin: 5px;
     margin-bottom: 5vh;
     border-radius: 10px;
-    background-color: #4A628A;
+    
+}
+.caroImg{
+    
+    height: 60vh;
+    width: 100%;
+
 }
 #body_part{
     position: relative;
@@ -54,7 +71,7 @@ body{
     /* position: relative;
     left: 12vw; */
     /* background-image: url('./bag_image.jpg'); */
-    background-color: #7AB2D3;
+    background-color: #4A628A;
     background-size: cover;
     color: WHITE;
     padding: 3vw;
@@ -71,14 +88,7 @@ body{
     /* padding: 10px; */
     /* padding: 0 5px 5px 0; */
 }
-#bus-search-form{
-    background-color:#DFF2EB ;
-    border-radius: 10px;
-    padding: 10px;
-    position: relative;
-    top: 10vh;
-   
-}
+
 .nav-tabs .nav-link.active {
     border-bottom: 2px solid red;
     color: red;
@@ -171,7 +181,7 @@ label{
     text-shadow: 1px 1px 5px white;
 } */
 /* Basic Styling */
-.footer {
+/* .footer {
     background-color: #4A628A;
     color: #fff;
     padding: 20px;
@@ -199,8 +209,16 @@ label{
 .footer-text {
     font-size: 1rem;
     margin-top: 10px;
+} */
+footer {
+   
+    
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+    top: 25vh;
 }
-
 .social-icon {
     margin: 0 10px;
     color: #fff;
@@ -303,16 +321,7 @@ label{
     background: #DFF2EB;
     border-radius: 8px;
 }
-.caroImg{
-    margin: 2vw;
-    position: relative;
-    left: 33vw;
-    height: 200px; 
-    width: 500px;
-    text-align: center;
-    border-radius: 10px;
 
-}
 #rating{
     border: 2px solid black;
     padding: 0.2vw;
@@ -348,12 +357,12 @@ label{
     box-shadow: 2px 2px 10px aqua;
     background-color: aqua;
 } */
- @media screen and (max-width: 1025px) {
+ /* @media screen and (max-width: 1025px) {
     .caroImg{
         width: 300px;
         left: 31vw;
     }
- }
+ } */
 @media screen and (max-width:770px) {
     .date{
         margin-top: -8vh;
@@ -361,16 +370,16 @@ label{
     label{
         font-size: 16px;
     }
-    .caroImg{
+    /* .caroImg{
         width: 300px;
         left: 31vw;
-    }
+    } */
 }
 @media screen and (max-width:430px) {
-    .caroImg{
+    /* .caroImg{
         width: 250px;
         left: 20vw;
-    }
+    } */
     #bus_logo{
         width: 100px !important;
     }
@@ -408,9 +417,9 @@ label{
     }
 }
 @media screen and (max-width: 380px) {
-    .caroImg{
+    /* .caroImg{
         left: 15vw;
-    }
+    } */
 }
 @media screen and (max-width:320px) {
     .enjoy{
@@ -419,8 +428,8 @@ label{
     .qr{
         height: 600px;
     }
-    .caroImg{
+    /* .caroImg{
         width: 220px;
         left: 14vw;
-    }
+    } */
 }
