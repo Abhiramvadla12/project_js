@@ -436,9 +436,10 @@ footer {
         width: 100px !important;
     }
     .search_buses{
-        height: 83vh;
+        height: 75vh;
     }
     .qr{
+        height: 70vh;
         width: 100%;
         left: 0;
     }
@@ -468,6 +469,13 @@ footer {
     .layout_seats{
         flex-wrap: wrap;
     }
+    .rating{
+        margin: 1vw;
+
+    }
+    #bus-search-form{
+        padding: 2px;
+    }
 }
 @media screen and (max-width: 380px) {
     /* .caroImg{
@@ -477,6 +485,12 @@ footer {
         grid-template-columns: repeat(3,35vw);
         gap:0;
      }
+     .enjoy{
+        display: block;
+    }
+    .qr{
+        height: 600px;
+    }
 }
 @media screen and (max-width:320px) {
     .enjoy{
