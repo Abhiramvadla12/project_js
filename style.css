@@ -13,7 +13,7 @@ body{
     background-size: contain; */
     /* background-repeat: no-repeat; */
     height: 50vh;
-    background-color: #4A628A;
+    background-color:#7AB2D3;
 }
 #bus-search-form{
     background-color:#DFF2EB ;
@@ -23,11 +23,12 @@ body{
    
    
 }
+
 .book{
     margin: 15px;
 }
 .book,.fast{
-    color: #DFF2EB;
+    color: black;
 }
 
 .find,.from,.to,.date{
@@ -41,7 +42,7 @@ body{
 .offers{
     /* border: 2px solid #4A628A; */
     height: 60vh;
-    width: 100%;
+   
     /* position: relative;
     left:15vw; */
     margin: 5px;
@@ -49,12 +50,57 @@ body{
     border-radius: 10px;
     
 }
-.caroImg{
-    
-    height: 60vh;
-    width: 100%;
-
+.caro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background: #DFF2EB;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+.caroImg {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.caroText {
+    text-align: left;
+    background: rgba(0, 123, 255, 0.1);
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+
+.caroText h2 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.caroText h4 {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .caroImg{
+        width: 220px;
+    }
+    .caro {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .caroText {
+        text-align: center;
+    }
+}
+
+
 #body_part{
     position: relative;
     top: 11vh;
@@ -64,16 +110,15 @@ body{
     text-align: center;
 }
 .qr{
-    border: 2px solid;
+    border: 2px solid white;
     height: 60vh;
     width: 100%;
     border-radius: 10px;
     /* position: relative;
     left: 12vw; */
     /* background-image: url('./bag_image.jpg'); */
-    background-color: #4A628A;
+    background-color: #7AB2D3;
     background-size: cover;
-    color: WHITE;
     padding: 3vw;
 }
 .enjoy{
@@ -85,7 +130,9 @@ body{
     border: 2px solid;
     border-radius: 10px;
     text-align: center;
-    /* padding: 10px; */
+   
+    padding: 10px;
+    background-color: white;
     /* padding: 0 5px 5px 0; */
 }
 
@@ -324,7 +371,7 @@ footer {
 
 #rating{
     border: 2px solid black;
-    padding: 0.2vw;
+    padding: 5px;
     border-radius: 10px;;
     background-color: rgb(74, 235, 66);
    margin: 0;
@@ -363,6 +410,12 @@ footer {
         left: 31vw;
     }
  } */
+ .quick{
+    font-size: 1em;
+}
+
+
+
 @media screen and (max-width:770px) {
     .date{
         margin-top: -8vh;
@@ -376,10 +429,9 @@ footer {
     } */
 }
 @media screen and (max-width:430px) {
-    /* .caroImg{
-        width: 250px;
-        left: 20vw;
-    } */
+    .caroImg{
+        width: 150px;
+    }
     #bus_logo{
         width: 100px !important;
     }
